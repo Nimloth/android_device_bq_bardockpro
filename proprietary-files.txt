@@ -828,6 +828,8 @@ vendor/etc/sap.conf
 /vendor/etc/xtwifi.conf
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
+lib/liblocationservice_jni.so
+lib64/liblocationservice_jni.so
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
