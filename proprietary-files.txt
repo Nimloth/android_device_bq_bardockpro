@@ -73,8 +73,8 @@ vendor/bin/mm-qcamera-daemon
 lib/libarcsoft_beautyshot.so
 lib/libcam.beautyshot.so
 lib/libcam.vidhance.so
-vendor/lib/libmm-qcamera.so
 lib/libmpbase.so
+lib/libtrueportrait.so
 lib/libvidhance.so
 vendor/lib/libmmcamera_dcrf_lib.so
 vendor/lib/libflash_pmic.so
@@ -82,6 +82,7 @@ vendor/lib/libflash_gpio.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmm-qcamera.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_csidtg.so
@@ -1084,6 +1085,8 @@ vendor/lib64/libdisp-aba.so
 # QMI
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
+lib/libdiag_system.so
+lib64/libdiag_system.so
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
 -vendor/lib/libdsi_netctrl.so
