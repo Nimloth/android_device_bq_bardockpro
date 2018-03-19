@@ -201,6 +201,10 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     libcurl
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/ilitek_i2c.kl:system/usr/keylayout/ilitek_i2c.kl
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
