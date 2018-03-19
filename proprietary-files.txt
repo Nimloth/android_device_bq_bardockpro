@@ -723,6 +723,7 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 vendor/bin/hvdcp_opti
 
 # DPM
+bin/dpmd
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
@@ -1222,3 +1223,4 @@ vendor/lib/mediadrm/libwvdrmengine.so
 vendor/bin/fstman
 vendor/bin/wcnss_service
 vendor/bin/cnss-daemon
+vendor/bin/cnss_diag

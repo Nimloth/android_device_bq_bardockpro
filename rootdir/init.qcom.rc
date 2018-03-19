@@ -214,15 +214,33 @@ on boot
     chown system system /sys/class/leds/blue/blink
     chown system system /sys/class/leds/green/blink
 
-    #tp version
-    start tpver
-
     # Allow access to emmc rawdump block partition and dload sysfs node
     chown root system /dev/block/bootdevice/by-name/rawdump -p /dev/block/
     chmod 0660 /dev/block/bootdevice/by-name/rawdump -p /dev/block/
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
+    # Allow access to sensors device attributes
+    chown system system /sys/class/sensors/MPU6050-accel/enable
+    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    chown system system /sys/class/sensors/MPU6050-gyro/enable
+    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    chown system system /sys/class/sensors/apds9930-light/enable
+    chown system system /sys/class/sensors/apds9930-light/poll_delay
+    chown system system /sys/class/sensors/apds9930-proximity/enable
+    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
+    chown system system /sys/class/sensors/compass/enable
+    chown system system /sys/class/sensors/compass/poll_delay
+    chown system system /sys/class/sensors/bma2x2-accel/enable
+    chown system system /sys/class/sensors/bma2x2-accel/poll_delay
+    chown system system /sys/class/sensors/ltr553-light/enable
+    chown system system /sys/class/sensors/ltr553-light/poll_delay
+    chown system system /sys/class/sensors/ltr553-proximity/enable
+    chown system system /sys/class/sensors/ltr553-proximity/poll_delay
+    chown system system /sys/class/sensors/ap3426-light/enable
+    chown system system /sys/class/sensors/ap3426-light/poll_delay
+    chown system system /sys/class/sensors/ap3426-proximity/enable
+    chown system system /sys/class/sensors/ap3426-proximity/poll_delay
 
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
@@ -510,23 +528,12 @@ on property:bluetooth.dun.status=running
 on property:bluetooth.dun.status=stopped
     stop bt-dun
 
-
-on property:bluetooth.hciattach=true
-    start hciattach
-
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
-
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
+    start cnss_diag
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
-
-service tpver  /init.bq.tp.sh
-    class late_start
-    user root
-    oneshot
 
 service cnd /system/vendor/bin/cnd
     class main
@@ -691,6 +698,20 @@ service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
 on property:wifi.ftmd.load=true
     insmod /system/lib/modules/wlan.ko con_mode=5
 
+service cnss_diag /system/vendor/bin/cnss_diag -q -f
+    class main
+    user system
+    group system wifi inet net_admin sdcard_rw media_rw diag
+    oneshot
+
+service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
+    class late_start
+    user system
+    group system inet net_admin wifi
+    capabilities NET_ADMIN
+
+on property:sys.shutdown.requested=*
+    stop cnss-daemon
 
 service loc_launcher /system/vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
@@ -706,18 +727,16 @@ service qcom-sh /vendor/bin/init.qcom.sh
     user root
     oneshot
 
-
-service modelselect /init.bq.modelselect.sh
-    class late_start
-    user root
-    oneshot
-
-service qcom-post-boot /system/etc/init.qcom.post_boot.sh
+service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     disabled
     oneshot
 
+service modelselect /system/etc/init.bq.modelselect.sh
+    class late_start
+    user root
+    oneshot
 
 on property:sys.boot_completed=1
     start qcom-post-boot

@@ -43,11 +43,21 @@ service stop_diag_mdlog /system/vendor/bin/diag_mdlog -k
     disable
     oneshot
 
+service tpver /system/bin/sh /system/etc/init.bq.tp.sh
+    class late_start
+    user root
+    oneshot
+    seclabel u:r:tpver:s0
+
 on property:persist.qxdm.enable=1
     start diag_mdlog
 
 on property:persist.qxdm.enable=0
     start stop_diag_mdlog
+
+on property:sys.boot_completed=1
+   #tp version
+   start tpver
 
 service set_sn /system/bin/adjust_serialno setsn
     disable
