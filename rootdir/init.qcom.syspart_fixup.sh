@@ -51,7 +51,7 @@ fi
 # prevent slowdown at boot.
 
 # Run wifi script
-if [ -f /system/etc/init.qcom.wifi.sh ]; then
+if [ -f /vendor/bin/init.qcom.wifi.sh ]; then
   /vendor/bin/sh /vendor/bin/init.qcom.wifi.sh "$target" "$serial"
 fi
 

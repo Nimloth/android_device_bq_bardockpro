@@ -733,6 +733,11 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     disabled
     oneshot
 
+service qcom-kickoff /vendor/bin/init.qcom.syspart_fixup.sh
+    class late_start
+    user root
+    oneshot
+
 service modelselect /system/etc/init.bq.modelselect.sh
     class late_start
     user root
@@ -741,6 +746,7 @@ service modelselect /system/etc/init.bq.modelselect.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
     start modelselect
+    start qcom-kickoff
 
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
