@@ -362,7 +362,6 @@ PRODUCT_PACKAGES += \
     wlutil \
     wpa_supplicant \
     wpa_supplicant.conf \
-    wcnss_service \
     WCNSS_cfg.dat
 
 # Wi-FI
