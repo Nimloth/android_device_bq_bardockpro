@@ -931,15 +931,11 @@ lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
 lib/vendor.display.color@1.0.so
 lib/vendor.display.postproc@1.0.so
-lib/vendor.qti.hardware.factory@1.0.so
-lib/vendor.qti.hardware.iop@1.0.so
 lib/vendor.qti.hardware.qdutils_disp@1.0.so
 lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so
 lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
 lib64/vendor.display.color@1.0.so
 lib64/vendor.display.postproc@1.0.so
-lib64/vendor.qti.hardware.factory@1.0.so
-lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
