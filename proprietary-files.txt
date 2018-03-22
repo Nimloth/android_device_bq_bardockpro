@@ -9,6 +9,10 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 
+# AptX
+vendor/lib/libaptXHD_encoder.so
+vendor/lib/libaptXScheduler.so
+vendor/lib/libaptX_encoder.so
 
 # Audio
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
