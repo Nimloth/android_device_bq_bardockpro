@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/bq/bardock
+LOCAL_PATH := device/bq/bardockpro
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 TARGET_OTA_ASSERT_DEVICE := bardock,bardock-pro,bardockpro
@@ -193,4 +193,4 @@ WIFI_DRIVER_STATE_ON := 1
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Inherit from the proprietary version
--include vendor/bq/bardock/BoardConfigVendor.mk
+-include vendor/bq/bardockpro/BoardConfigVendor.mk
