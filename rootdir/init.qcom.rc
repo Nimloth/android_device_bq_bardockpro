@@ -146,6 +146,18 @@ on boot
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
+    chmod 0644 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+    setprop sys.fp.goodix 1
+    chmod 0777 /dev/cs_spi
+    chmod 0777 /dev/qseecom
+    chown system system /dev/cs_spi
+    chmod 0644 /dev/sunwave_fp
+    chown system system /dev/sunwave_fp
+    chmod 0666 /dev/fpsdev0
+    chown system system /dev/fpsdev0
+
+
     #For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
@@ -589,7 +601,6 @@ service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     group bluetooth net_bt_admin inet
     disabled
     oneshot
-
 
 service port-bridge /system/vendor/bin/port-bridge
     class main

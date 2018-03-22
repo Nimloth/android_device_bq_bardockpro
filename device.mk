@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
-## Audio configuration files
+# Audio configuration files
 PRODUCT_COPY_FILES += \
     hardware/qcom/audio-caf/msm8996/configs/msm8953/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     hardware/qcom/audio-caf/msm8996/configs/msm8953/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
     hardware/qcom/audio-caf/msm8996/configs/msm8953/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     hardware/qcom/audio-caf/msm8996/configs/msm8953/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml
 
-#XML Audio configuration files
+# XML Audio configuration files
 PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -294,7 +294,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.target.rc \
     init.bq.common.rc \
-    init.bq.device.rc \
     init.qcom.syspart_fixup.sh \
     init.bq.tp.sh \
     init.qcom.wifi.sh \
