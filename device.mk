@@ -295,7 +295,6 @@ PRODUCT_PACKAGES += \
     init.bq.common.rc \
     init.bq.device.rc \
     init.qcom.syspart_fixup.sh \
-    init.bq.modelselect.sh \
     init.bq.tp.sh \
     init.qcom.wifi.sh \
     ueventd.qcom.rc

@@ -739,14 +739,8 @@ service qcom-kickoff /vendor/bin/init.qcom.syspart_fixup.sh
     user root
     oneshot
 
-service modelselect /system/etc/init.bq.modelselect.sh
-    class late_start
-    user root
-    oneshot
-
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start modelselect
     start qcom-kickoff
 
 service atfwd /vendor/bin/ATFWD-daemon
