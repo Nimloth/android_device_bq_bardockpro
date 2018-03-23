@@ -587,20 +587,17 @@ service ipacm-diag /system/vendor/bin/ipacm-diag
     class main
     user radio
     socket ipacm_log_file dgram 660 radio radio
-    group radio diag oem_2901
-    disabled
+    group radio diag
 
 service ipacm /system/vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    disabled
 
 service qti /system/vendor/bin/qti
     class main
     user radio
-    group radio oem_2901 diag usb net_admin
-    disabled
+    group radio diag usb net_admin
 
 service sensors /vendor/bin/sensors.qcom
     class core
@@ -753,8 +750,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
     user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    group radio cache inet misc audio sdcard_r sdcard_rw diag log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /charger
@@ -781,14 +777,14 @@ on property:sys.qbcharger.enable=false
 service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
 service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
