@@ -57,9 +57,12 @@ on property:sys.boot_completed=1
    #tp version
    start tpver
 
-service set_sn /system/bin/adjust_serialno setsn
+service nvtool /system/bin/nvtool
+    class main
+    user root
     disable
     oneshot
+    seclabel u:r:nvtool:s0
 
 on property:sys.sn_set=1
-   start set_sn
+   start nvtool

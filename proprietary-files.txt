@@ -67,7 +67,7 @@ vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
 # BQ (misc)
-bin/adjust_serialno
+bin/nvtool
 
 # Camera
 lib/libtrueportrait.so
