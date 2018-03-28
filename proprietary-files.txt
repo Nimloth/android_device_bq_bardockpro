@@ -1276,6 +1276,7 @@ etc/firmware/ice40.bin
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Wi-Fi
+bin/sigma_dut
 vendor/bin/fstman
 vendor/bin/wcnss_service
 vendor/bin/cnss-daemon
