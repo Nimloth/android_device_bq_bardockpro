@@ -83,9 +83,11 @@ vendor/bin/mm-qcamera-app
 lib/libarcsoft_beautyshot.so
 lib/libcam.beautyshot.so
 lib/libcam.vidhance.so
+lib/libdualcameraddm.so
 lib/libmpbase.so
 lib/libtrueportrait.so
 lib/libvidhance.so
+lib64/libdualcameraddm.so
 vendor/lib/libmmcamera_dcrf_lib.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libflash_gpio.so
@@ -169,6 +171,8 @@ vendor/lib/libmmcamera_sony_imx298_ofilm_eeprom.so
 vendor/lib/libmmcamera_sony_imx298_sunny_eeprom.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sunny_8865_eeprom.so
+vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so
+vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64a_imx362_eeprom.so
 vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so
 vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
@@ -889,6 +893,7 @@ lib64/liblocationservice_jni.so
 lib/vendor.qti.gnss@1.0.so
 lib64/vendor.qti.gnss@1.0.so
 vendor/bin/hw/vendor.qti.gnss@1.0-service
+vendor/bin/DR_AP_Service
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -897,6 +902,9 @@ vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/lib/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib/vendor.qti.gnss@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
+vendor/lib/libDRPlugin.so
+vendor/lib/libdrplugin_client.so
+vendor/lib/lib_drplugin_server.so
 vendor/lib64/lib_drplugin_server.so
 -vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
@@ -1191,6 +1199,8 @@ framework/QtiTelephonyServicelibrary.jar
 vendor/lib/libmdmdetect.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
+vendor/lib/libqcrilFramework.so
+vendor/lib/libril-qc-hal-qmi.so
 -vendor/lib/libqmiservices.so
 vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so
@@ -1207,6 +1217,8 @@ vendor/lib64/libnetmgr.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 -vendor/lib64/libqmiservices.so
+vendor/lib64/libqcrilFramework.so
+vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
