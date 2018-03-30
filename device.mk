@@ -184,6 +184,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# Filesystem
+PRODUCT_PACKAGES += \
+	setup_fs
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
