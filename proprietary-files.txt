@@ -212,6 +212,16 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
+vendor/lib/libscveBlobDescriptor.so
+vendor/lib/libscveBlobDescriptor_stub.so
+vendor/lib/libscveCommon.so
+vendor/lib/libscveCommon_stub.so
+vendor/lib/libscveImageCorrection.so
+vendor/lib/libscveObjectSegmentation.so
+vendor/lib/libscveObjectTracker.so
+vendor/lib/libscveObjectTracker_stub.so
+vendor/lib/libscvePanorama.so
+vendor/lib/libscvePanorama_lite.so
 vendor/lib/libubifocus.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libts_detected_face_hal.so
@@ -788,12 +798,34 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib64/libdpmqmihal.so
 
 # DRM
+lib/libGPTEE_system.so
+lib/libQTEEConnector_system.so
+lib/vendor.qti.hardware.qteeconnector@1.0.so
+lib64/libGPTEE_system.so
+lib64/libQTEEConnector_system.so
+lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/bin/qseecomd
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib/libcppf.so
-vendor/lib/librmp.so
+vendor/lib/librpmb.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libGPreqcancel_svc.so
+vendor/lib/libGPreqcancel.so
+vendor/lib/libqisl.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libsecureui_svcsock.so
+vendor/lib/libsecureui.so
+vendor/lib/libSecureUILib.so
+vendor/lib/libssd.so
+vendor/lib/libtzdrmgenprov.so
+vendor/lib/libGPTEE_vendor.so
+vendor/lib/libQTEEConnector_vendor.so
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib/libsdedrm.so
-vendor/lib64/libStDrvInt.so
+vendor/lib/libStDrvInt.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -809,6 +841,8 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
+vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/librmp.so
 
 # DRM - Qualcomm Trusted Execution Environment
@@ -820,6 +854,7 @@ vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 
 # DSP
 vendor/lib/libsdsprpc.so
