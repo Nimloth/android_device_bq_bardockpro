@@ -255,6 +255,7 @@ lib64/libjni_ubifocus.so
 
 
 # Camera actuators
+vendor/lib/libactuator_bu64297.so
 vendor/lib/libactuator_dw9763.so
 vendor/lib/libactuator_pseudo.so
 
