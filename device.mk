@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
 # Use custom mixer paths
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_extcodec:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec \
+    $(LOCAL_PATH)/configs/audio/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_mtp_no_hifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp_no_hifi.xml
 
